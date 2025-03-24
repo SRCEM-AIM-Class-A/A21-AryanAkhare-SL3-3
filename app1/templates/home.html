@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Store</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #007bff, #6610f2);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 50px 20px;
+            background: url('{% static "app1/hero-bg.jpg" %}') center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color:#007bff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color:#007bff;
+
+        }
+
+        .btn {
+            background: linear-gradient(90deg, #007bff, #6610f2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Features */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ShopEase</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/products/">Products</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Discover Premium Products</h1>
+        <p>Exclusive deals, top quality, and unbeatable prices.</p>
+        <button class="btn">Explore Now</button>
+    </section>
+
+    <section class="card-container">
+        <div class="card">
+            <h3 style="color: #007bff;">Fast Delivery</h3>
+            <p>Get your order delivered within 24 hours.</p>
+        </div>
+        <div class="card">
+            <h3 style="color: #007bff;">Secure Payments</h3>
+            <p>100% safe and secure transactions.</p>
+        </div>
+        <div class="card">
+            <h3 style="color: #007bff;">Top Quality</h3>
+            <p>Only the best, hand-picked products.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. All rights reserved.</p>
+    </footer>
+</body>
+</html>
