@@ -7,9 +7,9 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 script {
-                    // Clone the Git repository
+                    // Clone the Git repository from the main branch
                     try {
-                        git 'https://github.com/SRCEM-AIM-Class-A/A21-AryanAkhare-SL3-3.git'
+                        git branch: 'main', url: 'https://github.com/SRCEM-AIM-Class-A/A21-AryanAkhare-SL3-3.git'
                     } catch (Exception e) {
                         error "Git Clone failed: ${e.message}"
                     }
